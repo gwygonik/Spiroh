@@ -5,3 +5,7 @@ Processing app to create guilloche-like images&mdash;similar to a spirograph&mda
 To run this app you will need Processing (processing.org) and the ControlP5 library (Sketch->Import Library...->Add Library...)
 
 Here are a few examples, including the interface:
+
+<img width="1400" alt="spiroh_05f" src="https://cloud.githubusercontent.com/assets/2564583/23840290/541ff34c-0761-11e7-84c3-044b918b254f.png">
+
+![spiroh_5294199](https://cloud.githubusercontent.com/assets/2564583/23840282/482de9b8-0761-11e7-84e5-319aba74f0d8.png)
