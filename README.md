@@ -13,3 +13,7 @@ Here are a few examples, including the interface:
 <img width="1400" alt="spiroh_05f" src="https://cloud.githubusercontent.com/assets/2564583/23840290/541ff34c-0761-11e7-84c3-044b918b254f.png">
 
 ![spiroh_5294199](https://cloud.githubusercontent.com/assets/2564583/23840282/482de9b8-0761-11e7-84e5-319aba74f0d8.png)
+
+<img width="371" alt="spiroh_02" src="https://cloud.githubusercontent.com/assets/2564583/23840479/d21bf830-0762-11e7-977c-ef3cd741846b.png">
+
+<img width="800" alt="spiroh_04" src="https://cloud.githubusercontent.com/assets/2564583/23840480/d2233d84-0762-11e7-998b-9df77d247a42.png">
