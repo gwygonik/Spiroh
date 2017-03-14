@@ -92,42 +92,53 @@ void generateImage() {
   outPNG.ellipseMode(RADIUS);
   outPNG.endDraw();
   
+  float c;
+  
   if (thickness1 > 0) {
+    c = TWO_PI/division1;
     outPNG.beginDraw();
     outPNG.strokeWeight(thickness1);
     for (float i=0;i<TWO_PI;i+=TWO_PI/division1) {
-      outPNG.pushMatrix();
-      outPNG.translate(outPNG.width/2,outPNG.height/2);
-      outPNG.scale(2.0);
-      outPNG.rotate(radians(rotate1));
-      outPNG.ellipse(sin(i)*diameter1, cos(i) * diameter1, radius1, radius1);
-      outPNG.popMatrix();
+      if (abs(TWO_PI - i) > c/2.0) {
+        outPNG.pushMatrix();
+        outPNG.translate(outPNG.width/2,outPNG.height/2);
+        outPNG.scale(2.0);
+        outPNG.rotate(radians(rotate1));
+        outPNG.ellipse(sin(i)*diameter1, cos(i) * diameter1, radius1, radius1);
+        outPNG.popMatrix();
+      }
     }
     outPNG.endDraw();
   }
   if (thickness2 > 0) {
+    c = TWO_PI/division2;
     outPNG.beginDraw();
     outPNG.strokeWeight(thickness2);
     for (float i=0;i<TWO_PI;i+=TWO_PI/division2) {
-      outPNG.pushMatrix();
-      outPNG.translate(outPNG.width/2,outPNG.height/2);
-      outPNG.scale(2.0);
-      outPNG.rotate(radians(rotate2));
-      outPNG.ellipse(sin(i)*diameter2, cos(i) * diameter2, radius2, radius2);
-      outPNG.popMatrix();
+      if (abs(TWO_PI - i) > c/2.0) {
+        outPNG.pushMatrix();
+        outPNG.translate(outPNG.width/2,outPNG.height/2);
+        outPNG.scale(2.0);
+        outPNG.rotate(radians(rotate2));
+        outPNG.ellipse(sin(i)*diameter2, cos(i) * diameter2, radius2, radius2);
+        outPNG.popMatrix();
+      }
     }
     outPNG.endDraw();
   }
   if (thickness3 > 0) {
+    c = TWO_PI/division3;
     outPNG.beginDraw();
     outPNG.strokeWeight(thickness3);
     for (float i=0;i<TWO_PI;i+=TWO_PI/division3) {
-      outPNG.pushMatrix();
-      outPNG.translate(outPNG.width/2,outPNG.height/2);
-      outPNG.scale(2.0);
-      outPNG.rotate(radians(rotate3));
-      outPNG.ellipse(sin(i)*diameter3, cos(i) * diameter3, radius3, radius3);
-      outPNG.popMatrix();
+      if (abs(TWO_PI - i) > c/2.0) {
+        outPNG.pushMatrix();
+        outPNG.translate(outPNG.width/2,outPNG.height/2);
+        outPNG.scale(2.0);
+        outPNG.rotate(radians(rotate3));
+        outPNG.ellipse(sin(i)*diameter3, cos(i) * diameter3, radius3, radius3);
+        outPNG.popMatrix();
+      }
     }
     outPNG.endDraw();
   }
@@ -214,38 +225,47 @@ void renderSVG() {
   s.stroke(0);
   s.noFill();
   s.ellipseMode(RADIUS);
-  
+  float c;
   if (thickness1 > 0) {
+    c = TWO_PI/division1;
     s.strokeWeight(thickness1);
-    for (float i=0;i<TWO_PI;i+=TWO_PI/division1) {
-      s.pushMatrix();
-      s.translate(s.width/2,s.height/2);
-      s.scale(2.0);
-      s.rotate(rotate1);
-      s.ellipse(sin(i)*diameter1, cos(i) * diameter1, radius1, radius1);
-      s.popMatrix();
+    for (float i=0.0;i<TWO_PI;i+=TWO_PI/division1) {
+      if (abs(TWO_PI - i) > c/2.0) {
+        s.pushMatrix();
+        s.translate(s.width/2,s.height/2);
+        s.scale(2.0);
+        s.rotate(rotate1);
+        s.ellipse(sin(i)*diameter1, cos(i) * diameter1, radius1, radius1);
+        s.popMatrix();
+      }
     }
   }
   if (thickness2 > 0) {
+    c = TWO_PI/division2;
     s.strokeWeight(thickness2);
     for (float i=0;i<TWO_PI;i+=TWO_PI/division2) {
-      s.pushMatrix();
-      s.translate(s.width/2,s.height/2);
-      s.scale(2.0);
-      s.rotate(rotate2);
-      s.ellipse(sin(i)*diameter2, cos(i) * diameter2, radius2, radius2);
-      s.popMatrix();
+      if (abs(TWO_PI - i) > c/2.0) {
+        s.pushMatrix();
+        s.translate(s.width/2,s.height/2);
+        s.scale(2.0);
+        s.rotate(rotate2);
+        s.ellipse(sin(i)*diameter2, cos(i) * diameter2, radius2, radius2);
+        s.popMatrix();
+      }
     }
   }
   if (thickness3 > 0) {
+    c = TWO_PI/division3;
     s.strokeWeight(thickness3);
     for (float i=0;i<TWO_PI;i+=TWO_PI/division3) {
-      s.pushMatrix();
-      s.translate(s.width/2,s.height/2);
-      s.scale(2.0);
-      s.rotate(rotate3);
-      s.ellipse(sin(i)*diameter3, cos(i) * diameter3, radius3, radius3);
-      s.popMatrix();
+      if (abs(TWO_PI - i) > c/2.0) {
+        s.pushMatrix();
+        s.translate(s.width/2,s.height/2);
+        s.scale(2.0);
+        s.rotate(rotate3);
+        s.ellipse(sin(i)*diameter3, cos(i) * diameter3, radius3, radius3);
+        s.popMatrix();
+      }
     }
   }
   s.dispose();
